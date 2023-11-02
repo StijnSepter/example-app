@@ -28,16 +28,3 @@ class Handler extends ExceptionHandler
         });
     }
 }
-
-
-$post = new App\Models\comments
-$post->name = "stijn";
-$post->email = "dit is een e-mail";
-$post->comment = 'Dit is de body van post 1. Dit is de body van post 1.';
-$post->save();
-
-$post = new App\Models\comments
-$post->name = "stijn2";
-$post->email = "dit is een e-mail2";
-$post->comment = 'Dit is de body van post 2. Dit is de body van post 2.';
-$post->save();

@@ -8,39 +8,39 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/post/{post}', function ($slug) {
+Route::get('post/{post}', function ($id) {
     return view('post', [
-        'post' => Post::find($slug)
+        'post' => Post::find($id)
     ]);
-})->where('post','[A-z_\-]+');
+});
 
 Route::get('/post', function () {
-    $files =  File::files(resource_path("posts/"));
+    // $files =  File::files(resource_path("posts/"));
 
-    $posts = collect($files)
-    ->map(function ($file){
-        $document = YamlFrontMatter::parseFile($file);
+    // $posts = collect($files)
+    // ->map(function ($file){
+    //     $document = YamlFrontMatter::parseFile($file);
 
-        return new Post(
-            $document->title,
-            $document->excerpt,
-            $document->date,
-            $document->body(),
-            $document->slug
-        );
-    });
+    //     return new Post(
+    //         $document->title,
+    //         $document->excerpt,
+    //         $document->date,
+    //         $document->body(),
+    //         $document->slug
+    //     );
+    // });
 
-    foreach ($files as $file) {
-        $document = YamlFrontMatter::parseFile($file);
+    // foreach ($files as $file) {
+    //     $document = YamlFrontMatter::parseFile($file);
 
-        $posts[] = new Post(
-            $document->title,
-            $document->excerpt,
-            $document->date,
-            $document->body(),
-            $document->slug
-        );
-    }
+    //     $posts[] = new Post(
+    //         $document->title,
+    //         $document->excerpt,
+    //         $document->date,
+    //         $document->body(),
+    //         $document->slug
+    //     );
+    // }
     return view('post',[
         'posts' => $posts
     ]);

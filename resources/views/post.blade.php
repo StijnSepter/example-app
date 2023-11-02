@@ -22,14 +22,14 @@
             </div>
         </nav>
 
-        <?php foreach ($posts as $post) :?>
-            <article>
-                <h1><a href="post/<?= $post->slug;?>"><?= $post->title;?></a></h1>
-                <div>
-                    <?= $post->excerpt;?>
-                </div>
-            </article>
-        <?php endforeach;?> 
+        @foreach ($posts as $post)
+        <article>
+            <h1><a href="post/<?= $post->id; ?>"><?= $post->title; ?></a></h1>
+            <div>
+                <?= $post->excerpt; ?>
+            </div>
+        </article>
+        @endforeach
 
         <footer class="bg-gray-100 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">
             <img src="./images/lary-newsletter-icon.svg" alt="" class="mx-auto -mb-6" style="width: 145px;">
