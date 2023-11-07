@@ -494,4 +494,14 @@
             </div>
         </footer>
     </section>
+    @foreach ($posts as $post)
+        <article>
+            <h1><a href="post/<?= $post->id; ?>"><?= $post->title; ?></a></h1>
+            <div>
+                <?= $post->excerpt; ?>
+                <?= $post->title; ?>
+                <?= $post->created_at; ?>
+            </div>
+        </article>
+        @endforeach
 </body>

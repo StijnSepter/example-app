@@ -5,7 +5,9 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Illuminate\Support\Facades\File;
 
 Route::get('/', function () {
-    return view('welcome');
+        return view('welcome',[
+            'posts' => Post::all()
+        ]);
 });
 
 Route::get('post/{post}', function ($id) {
@@ -41,7 +43,12 @@ Route::get('/post', function () {
     //         $document->slug
     //     );
     // }
-    return view('post',[
-        'posts' => $posts
-    ]);
+
+
+    Route::get('/post', function () {
+        return view('post',[
+            'post' => Post::all()
+        ]);
+    });
 });
+
