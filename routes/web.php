@@ -16,40 +16,16 @@ Route::get('post/{post}', function ($id) {
     ]);
 });
 
-// Route::get('/post', function () {
-    // $files =  File::files(resource_path("posts/"));
-
-    // $posts = collect($files)
-    // ->map(function ($file){
-    //     $document = YamlFrontMatter::parseFile($file);
-
-    //     return new Post(
-    //         $document->title,
-    //         $document->excerpt,
-    //         $document->date,
-    //         $document->body(),
-    //         $document->slug
-    //     );
-    // });
-
-    // foreach ($files as $file) {
-    //     $document = YamlFrontMatter::parseFile($file);
-
-    //     $posts[] = new Post(
-    //         $document->title,
-    //         $document->excerpt,
-    //         $document->date,
-    //         $document->body(),
-    //         $document->slug
-    //     );
-    // }
-
-// });
-
 Route::get('/post', function () {
-        return view('post',[
-            'posts' => Post::all()
+    return view('post',[
+        'posts' => Post::all()
     ]);
 });
 
 
+// mee bezig
+Route::get('blogg/{blogg}', function ($item){
+    return view('blogg', [
+        'blogg' => Blogg::all()
+    ]);
+});

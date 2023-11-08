@@ -78,9 +78,9 @@
                     </svg>
                 </div>
 
-                <!-- Search -->
-                <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl px-3 py-2">
-                    <form method="GET" action="{{roete('welcome')}}"> 
+                <!-- Search  -->
+                 <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl px-3 py-2">
+                    <form method="GET" action="#"> 
                         <input type="text" name="search" placeholder="Find something" id="search"
                                class="bg-transparent placeholder-black font-semibold text-sm">
                     </form>
@@ -401,14 +401,15 @@
                         </div>
                     </div>
                 </article>
-
+                <!-- @foreach ($blogg as $bloggs)
                 <article
                     class="transition-colors duration-300 hover:bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl">
                     <div class="py-6 px-5">
                         <div>
-                            <img src="./images/illustration-5.png" alt="Blog Post illustration" class="rounded-xl">
+                            <img src="<?= //$blogg->url ?>" alt="Blog Post illustration" class="rounded-xl">
                         </div>
-
+                @endforeach -->
+ <!--
                         <div class="mt-8 flex flex-col justify-between">
                             <header>
                                 <div class="space-x-2">
@@ -460,7 +461,7 @@
                                     </a>
                                 </div>
                             </footer>
-                        </div>
+                        </div> -->
                     </div>
                 </article>
             </div>
