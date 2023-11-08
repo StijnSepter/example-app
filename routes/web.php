@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\File;
 
 Route::get('/', function () {
         return view('welcome',[
-            'posts' => Post::all()
+            'post' => Post::all()
         ]);
 });
 
@@ -16,7 +16,7 @@ Route::get('post/{post}', function ($id) {
     ]);
 });
 
-Route::get('/post', function () {
+// Route::get('/post', function () {
     // $files =  File::files(resource_path("posts/"));
 
     // $posts = collect($files)
@@ -44,11 +44,12 @@ Route::get('/post', function () {
     //     );
     // }
 
+// });
 
-    Route::get('/post', function () {
+Route::get('/post', function () {
         return view('post',[
-            'post' => Post::all()
-        ]);
-    });
+            'posts' => Post::all()
+    ]);
 });
+
 

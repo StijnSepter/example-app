@@ -12,7 +12,7 @@ class Post{
     }
     public static function all()
     {
-        return collect(File::files(resource_path("posts/")))
+        return collect(File::files(resource_path("post/")))
             ->map(function ($file){
                 $document = YamlFrontMatter::parseFile($file);
 

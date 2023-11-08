@@ -80,8 +80,8 @@
 
                 <!-- Search -->
                 <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl px-3 py-2">
-                    <form method="GET" action="#">
-                        <input type="text" name="search" placeholder="Find something"
+                    <form method="GET" action="{{roete('welcome')}}"> 
+                        <input type="text" name="search" placeholder="Find something" id="search"
                                class="bg-transparent placeholder-black font-semibold text-sm">
                     </form>
                 </div>
@@ -494,14 +494,4 @@
             </div>
         </footer>
     </section>
-    @foreach ($posts as $post)
-        <article>
-            <h1><a href="post/<?= $post->id; ?>"><?= $post->title; ?></a></h1>
-            <div>
-                <?= $post->excerpt; ?>
-                <?= $post->title; ?>
-                <?= $post->created_at; ?>
-            </div>
-        </article>
-        @endforeach
 </body>
