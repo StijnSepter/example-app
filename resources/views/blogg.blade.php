@@ -21,27 +21,23 @@
                     for Updates</a>
             </div>
         </nav>
-
         <article>
-
-        <article>
-            <h1><a href="#"> <?= $blogg->title; ?></a></h1>
-            <div>
-            <br>
-                 <br>
-                <?= $blogg->excerpt; ?> <br>
-                <?= $blogg->body; ?> <br>
-                <?= $blogg->url; ?> <br>
-                <?= $blogg->user; ?> <br>
-                <?= $blogg->icon; ?> <br>
-                <?= $blogg->icon_name; ?> <br>
-                <?= $blogg->icon_tekt; ?> <br>
-                <?= $blogg->updated_at; ?> 
-            </div>
-        </article>
-
-
+            <article>
+                <h1><a href="#"> <?= $blogg->title; ?></a></h1>
+                <div>
+                <br>
+                    <br>
+                    <?= $blogg->excerpt; ?> <br>
+                    <?= $blogg->body; ?> <br>
+                    <?= $blogg->url; ?> <br>
+                    <?= $blogg->user; ?> <br>
+                    <?= $blogg->icon; ?> <br>
+                    <?= $blogg->icon_name; ?> <br>
+                    <?= $blogg->icon_tekt; ?> <br>
+                    <?= $blogg->updated_at; ?> 
+                </div>
             </article>
+        </article>
 
         <footer class="bg-gray-100 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">
             <img src="./images/lary-newsletter-icon.svg" alt="" class="mx-auto -mb-6" style="width: 145px;">

@@ -4,10 +4,10 @@ use App\Models\Blogg;
 use Illuminate\Support\Facades\Route;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Illuminate\Support\Facades\File;
+use App\Http\Controllers\SearchController;
 
 Route::get('/', function () {
         return view('welcome',[
-            'post' => Post::all(),
             'blogg' => Blogg::all(),
             'search' => Blogg::where("title") -> orWhere("%%"),
         ]);
@@ -21,4 +21,5 @@ Route::get('/blogg/{id}', function ($id) {
     ]);
 });
 
-Route::get('/results', 'SearchController@search')->name('search');
+
+Route::get('/search', [SearchController::class, 'search'])->name('search');
