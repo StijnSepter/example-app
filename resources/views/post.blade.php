@@ -23,13 +23,13 @@
         </nav>
 
         <article>
-        @foreach ($posts as $post)
+        @foreach ($blogg as $hay)
         <article>
-            <h1><a href="post/<?= $post->id; ?>"><?= $post->title; ?></a></h1>
+            <h1><a href="post/<?= $hay->id; ?>"><?= $hay->title; ?></a></h1>
             <div>
-                <?= $post->excerpt; ?>
-                <?= $post->title; ?>
-                <?= $post->created_at; ?>
+                <?= $hay->excerpt; ?>
+                <?= $hay->title; ?>
+                <?= $hay->created_at; ?>
             </div>
         </article>
         @endforeach
