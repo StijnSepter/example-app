@@ -13,16 +13,11 @@ Route::get('/', function () {
         ]);
 });
 
-Route::get('post/{post}', function ($id) {
-    return view('post', [
-        'post' => Post::find($id),
-    ]);
-});
 
-Route::get('/post/{post}', function () {
-    return view('post',[
+Route::get('/blogg/{id}', function ($id) {
+    return view('blogg',[
         'posts' => Post::all(),
-        'blogg' => Blogg::all(),
+        'blogg' => Blogg::findOrFail($id),
     ]);
 });
 

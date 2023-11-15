@@ -8,7 +8,7 @@
     <section class="px-6 py-8">
         <nav class="md:flex md:justify-between md:items-center">
             <div>
-                <a href="/">
+            <a href="/">
                     <img src="./images/logo.svg" alt="Laracasts Logo" width="165" height="16">
                 </a>
             </div>
@@ -23,16 +23,24 @@
         </nav>
 
         <article>
-        @foreach ($blogg as $hay)
+
         <article>
-            <h1><a href="post/<?= $hay->id; ?>"><?= $hay->title; ?></a></h1>
+            <h1><a href="#"> <?= $blogg->title; ?></a></h1>
             <div>
-                <?= $hay->excerpt; ?>
-                <?= $hay->title; ?>
-                <?= $hay->created_at; ?>
+            <br>
+                 <br>
+                <?= $blogg->excerpt; ?> <br>
+                <?= $blogg->body; ?> <br>
+                <?= $blogg->url; ?> <br>
+                <?= $blogg->user; ?> <br>
+                <?= $blogg->icon; ?> <br>
+                <?= $blogg->icon_name; ?> <br>
+                <?= $blogg->icon_tekt; ?> <br>
+                <?= $blogg->updated_at; ?> 
             </div>
         </article>
-        @endforeach
+
+
             </article>
 
         <footer class="bg-gray-100 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">
