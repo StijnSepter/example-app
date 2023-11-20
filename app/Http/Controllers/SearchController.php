@@ -20,5 +20,3 @@ class SearchController extends BaseController
         return view('results', compact('posts', 'query'));
     }
 }
-
-
